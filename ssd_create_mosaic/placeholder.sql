@@ -23,8 +23,10 @@ DECLARE
 =============================================================================
 Object Name: 
 Description: 
+
 Author: 
 Last Modified Date: 
+DB Compatibility: Oracle|
 Version: 0.1
 Status: [*Dev, Testing, Release, Blocked, AwaitingReview, Backlog]
 Remarks: 
@@ -32,7 +34,6 @@ Dependencies:
 - 
 =============================================================================
 */
-
 
 -- Extract script here
 
