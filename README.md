@@ -1,5 +1,5 @@
 # ssd-sql-tools
-## SQL tool library for creating and querying the Standard Safeguarding Dataset. 
+## Standard Safeguarding Dataset SQL toolset
 
 [this is a working/in progress repo]<br>
 Providing the needed toolset for creating a local platform agnostic SSD within existing infrastructures and aimed for near-zero overheads for your LA. 
