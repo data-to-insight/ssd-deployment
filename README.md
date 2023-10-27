@@ -1,7 +1,7 @@
 # ssd-sql-tools
 SQL tool library for creating and querying the Standard Safeguarding Dataset. 
 
-[in progress]
+[this is a working/in progress repo]
 Towards providing the needed toolset for creating of the SSD in a platform agnostic manner with near-zero overheads for your LA. 
 
 - [create the ssd for LiquidLogic](ssd_create_liquid_logic)
@@ -10,7 +10,7 @@ Towards providing the needed toolset for creating of the SSD in a platform agnos
 - [create the ssd for Azeus](ssd_create_azeus)
 - [create the ssd for Eclipse]
 
-Alongside creating the SSD from any CMS system and most common DB's, the aim is to provide a collaborative collection of SQL scripts developed specifically to work against the SSD to enable both statutory returns and further data analysis. Feedback and contributions from any local authority data stakeholders welcomed. 
+Alongside creating the SSD from any CMS system and most common DB's(Initially towards _SQL Server_ & _Oracle_ compatibility), the aim is to provide a collaborative collection of SQL scripts developed specifically to work against the SSD to enable both statutory returns and further data analysis. Feedback and contributions from any local authority data stakeholders welcomed. 
 
 - [dfe_stat_returns/SSD_AnnexA/](dfe_stat_returns)
 - [dfe_stat_returns/SSD_903/](dfe_stat_returns)
