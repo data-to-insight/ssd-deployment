@@ -1,13 +1,13 @@
 # ssd-sql-tools
-SQL tool library for querying the Standard Safeguarding Dataset. 
+SQL tool library for creating and querying the Standard Safeguarding Dataset. 
 
-A collaborative collection of SQL scripts developed specifically to work against the SSD to enable both statutory returns and further useful data analysis. Further feedback and contributions from any local authority data stakeholders welcomed. 
+A collaborative collection of SQL scripts developed specifically to work against the SSD to enable both statutory returns and further useful data analysis. Feedback and contributions from any local authority data stakeholders welcomed. 
 
-## AnnexA
+## dfe_stat_returns/SSD_AnnexA/
 -
-## 903
+## dfe_stat_returns/SSD_903/
 -
-## RIIA
+## dfe_stat_returns/SSD_RIIA/
 -
-## tbc
+## dfe_stat_returns/SSD_CIN/
 - 
