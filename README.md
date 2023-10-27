@@ -1,8 +1,8 @@
 # ssd-sql-tools
-SQL tool library for creating and querying the Standard Safeguarding Dataset. 
+## SQL tool library for creating and querying the Standard Safeguarding Dataset. 
 
-[this is a working/in progress repo]
-Towards providing the needed toolset for creating of the SSD in a platform agnostic manner with near-zero overheads for your LA. 
+[this is a working/in progress repo]<br>
+Providing the needed toolset for creating a local platform agnostic SSD with near-zero overheads for your LA. 
 
 - [create the ssd for LiquidLogic](ssd_create_liquid_logic)
 - [create the ssd for Mosaic](ssd_create_mosaic)
