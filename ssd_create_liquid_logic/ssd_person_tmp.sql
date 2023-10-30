@@ -16,7 +16,8 @@ SET @StartTime = GETDATE(); -- Record the start time
 
 
 -- ssd time-frame (YRS)
-DECLARE @YearsBack INT = 6;
+DECLARE @ssd_timeframe_years INT = 6;
+        @ssd_sub1_range_years INT = 1;
 
 /*
 =============================================================================
@@ -74,12 +75,12 @@ AND (
     OR EXISTS (
         SELECT 1 FROM Child_Social.FACT_CONTACTS fc
         WHERE fc.[EXTERNAL_ID] = p.[EXTERNAL_ID] 
-        AND fc.CONTACT_DTTM >= DATEADD(YEAR, -@YearsBack, GETDATE())
+        AND fc.CONTACT_DTTM >= DATEADD(YEAR, -@ssd_timeframe_years, GETDATE())
     )
     OR EXISTS (
         SELECT 1 FROM Child_Social.FACT_EHCP_EPISODE fe 
         WHERE fe.[EXTERNAL_ID] = p.[EXTERNAL_ID] 
-        AND fe.REQUEST_DTTM >= DATEADD(YEAR, -@YearsBack, GETDATE())
+        AND fe.REQUEST_DTTM >= DATEADD(YEAR, -@ssd_timeframe_years, GETDATE())
     )
 )
 ORDER BY

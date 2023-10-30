@@ -17,7 +17,9 @@ SET @StartTime = GETDATE(); -- Record the start time
 
 
 -- ssd time-frame (YRS)
-DECLARE @YearsBack INT = 6;
+DECLARE @ssd_timeframe_years INT = 6;
+        @ssd_sub1_range_years INT = 1;
+
 
 
 
