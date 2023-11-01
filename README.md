@@ -8,7 +8,7 @@ Providing the needed toolset for creating a local platform agnostic SSD within e
 - [create the ssd for LiquidLogic](ssd_create_liquid_logic)
 - [create the ssd for Mosaic](ssd_create_mosaic)
 
-  #### Phase 2
+#### Phase 2
 - [create the ssd for Care Director](ssd_create_care_director)
 - [create the ssd for Azeus](ssd_create_azeus)
 - [create the ssd for Eclipse]
