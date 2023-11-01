@@ -2,7 +2,8 @@
 ## Standard Safeguarding Dataset SQL toolset
 
 [this is a working/in progress repo]<br>
-Providing the needed toolset for creating a local platform agnostic SSD within existing infrastructures and aimed for near-zero overheads for your LA. 
+Providing the needed toolset for creating the SSD within existing infrastructures* and aimed for near-zero overheads for your LA. 
+*(local, platform agnostic or with the tools to enable this)
 
 #### Phase 1
 - [create the ssd for LiquidLogic](ssd_create_liquid_logic)
