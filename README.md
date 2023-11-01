@@ -15,9 +15,9 @@ Providing the needed toolset for creating a local platform agnostic SSD within e
 - [create the ssd for Paris]
 
 
-
+<p>
 Alongside creating the SSD from any CMS system and most common DB's(Initially towards _SQL Server_ & _Oracle_ compatibility), the aim is to provide a collaborative collection of SQL scripts developed specifically to work against the SSD to enable both statutory returns and further data analysis. Feedback and contributions from any local authority data stakeholders are welcomed.  SQL based queries, interogation and analysis can also be pre-emptively developed against the SSD schema as detailed/maintained here: [ssd-data-model on GitHub Pages](https://data-to-insight.github.io/ssd-data-model/index.html) . 
-
+</p>
 We're pre-emptively developing the required SQL based tools for generating the current DfE stat-returns. 
 - [dfe_stat_returns/SSD_AnnexA/](dfe_stat_returns)
 - [dfe_stat_returns/SSD_903/](dfe_stat_returns)
