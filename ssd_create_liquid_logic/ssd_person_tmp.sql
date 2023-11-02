@@ -3,6 +3,10 @@
 /* ********************************************************************************************************** */
 /* Development set up */
 
+-- Note: 
+-- This sample is for creating TEMP tables within the temp DB name space for testing purposes. 
+-- SSD extract files with the suffix ..._perm.sql are for creating the persistent table versions of the SSD. 
+
 USE HDM;
 GO
 
