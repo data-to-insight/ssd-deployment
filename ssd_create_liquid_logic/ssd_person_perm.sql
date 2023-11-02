@@ -2,6 +2,11 @@
 /* ********************************************************************************************************** */
 /* Development set up */
 
+-- Note: 
+-- This sample is for creating PER(Persistent) tables within the temp DB name space for testing purposes. 
+-- SSD extract files with the suffix ..._per.sql - for creating the persistent table versions.
+-- SSD extract files with the suffix ..._tmp.sql - for creating the temporary table versions.
+
 USE HDM;
 GO
 
