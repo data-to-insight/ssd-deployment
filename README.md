@@ -21,7 +21,8 @@ Because of common constraints/security restrictions within LA's*, the extract de
 #### For each SSD object/table extract scripts create:
 - [i]  <b>persistent</b> SSD table/object structure (files suffixed ..._per.sql) - e.g ssd_person_per.sql
 - [ii] <b>temporary</b> version of SSD table/object structure within the db #temp namespace (files suffixed ..._tmp.sql) - e.g ssd_person_tmp.sql
-*We have noted that a majority of LA data team access to raw CMS db tables/schemas is limited. Working in the temp namespace/schema allows us to work around this in the early stages. 
+
+*<i>We have noted that a majority of LA data team access to raw CMS db tables/schemas is limited. Working in the temp namespace/schema allows us to work around this in the early stages. </i>
 
 <br><br>
 Alongside creating the SSD from any CMS system and most common DB's(Initially towards _SQL Server_ & _Oracle_ compatibility), the aim is to provide a collaborative collection of SQL scripts developed specifically to work against the SSD to enable both statutory returns and further data analysis. Feedback and contributions from any local authority data stakeholders are welcomed.  SQL based queries, interogation and analysis can also be pre-emptively developed against the SSD schema as detailed/maintained here: [ssd-data-model on GitHub Pages](https://data-to-insight.github.io/ssd-data-model/index.html) . 
