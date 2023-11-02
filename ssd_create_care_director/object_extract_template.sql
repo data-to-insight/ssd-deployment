@@ -2,6 +2,11 @@
 /* ********************************************************************************************************** */
 /* Development set up */
 
+-- Note: 
+-- SSD extract files with the suffix ..._per.sql - for creating the persistent table versions.
+-- SSD extract files with the suffix ..._tmp.sql - for creating the temporary table versions(within the temp DB name space for testing purposes).
+
+
 -- Query run time vars
 DECLARE
     v_StartTime TIMESTAMP;
