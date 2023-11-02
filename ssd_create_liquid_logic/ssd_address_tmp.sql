@@ -4,6 +4,10 @@
 /* ********************************************************************************************************** */
 /* Development set up */
 
+-- Note: 
+-- This sample is for creating TEMP tables within the temp DB name space for testing purposes. 
+-- SSD extract files with the suffix ..._perm.sql are for creating the persistent table versions of the SSD. 
+
 USE HDM;
 GO
 
@@ -25,8 +29,8 @@ DECLARE @ssd_timeframe_years INT = 6;
 
 /* 
 =============================================================================
-Object Name: ssd_address
-Description: 
+Object Name: #ssd_address
+Description: Version for creating TEMP SSD tables. 
 Author: D2I
 Last Modified Date: 
 Version: 0.1
