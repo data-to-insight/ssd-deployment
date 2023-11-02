@@ -16,9 +16,9 @@ Providing the needed toolset for creating the SSD within existing infrastructure
 - [create the ssd for Paris]
 
 <br><br>
-Because of common constraints/security restrictions within LA's* , the extract development process has two core outputs [i/ii]. 
+Because of common constraints/security restrictions within LA's*, the extract development process has two core outputs to enable extract alpha-testing across LA's.
 <br>
-For each SSD object/table extract scripts to create:
+#### For each SSD object/table extract scripts create:
 - [i]  <b>persistent</b> SSD table/object structure (files suffixed ..._per.sql) - e.g ssd_person_per.sql
 - [ii] <b>temporary</b> version of SSD table/object structure within the db #temp namespace (files suffixed ..._tmp.sql) - e.g ssd_person_tmp.sql
 
