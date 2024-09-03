@@ -1,5 +1,5 @@
 #!/bin/bash
-# chmod +x systemc/refresh_all_extracts.sh
+# chmod +x systemc/refresh_all_downstream_extracts.sh
 # This bash file to be run from the downstream repo!
 
 # Script pulls from master ssd-data-model/ repo
