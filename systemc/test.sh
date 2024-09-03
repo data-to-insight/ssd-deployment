@@ -3,6 +3,7 @@
 
 # This bash file to be run from the downstream repo!
 
+# Paths in the upstream repo:
 # /workspaces/ssd-data-model/deployment_extracts/systemc/live/
 # /workspaces/ssd-data-model/deployment_extracts/mosaic/live/
 # /workspaces/ssd-data-model/deployment_extracts/eclipse/live/
@@ -29,16 +30,40 @@ fi
 # Enable sparse checkout and pull the specific folders from the source repository
 git config core.sparseCheckout true
 
-# Add systemc, mosaic, eclipse, caredirector, and azeus paths to sparse-checkout
+# Add paths to sparse-checkout
 echo "deployment_extracts/systemc/live/" > .git/info/sparse-checkout
 echo "deployment_extracts/mosaic/live/" >> .git/info/sparse-checkout
 echo "deployment_extracts/eclipse/live/" >> .git/info/sparse-checkout
 echo "deployment_extracts/caredirector/live/" >> .git/info/sparse-checkout
 echo "deployment_extracts/azeus/live/" >> .git/info/sparse-checkout
 
-# Checkout the necessary directories
-if ! git checkout ssd-data-model/main -- deployment_extracts/systemc/live/ deployment_extracts/mosaic/live/ deployment_extracts/eclipse/live/ deployment_extracts/caredirector/live/ deployment_extracts/azeus/live/; then
-  echo "Error: Failed to checkout the folders. Invalid reference or permissions issue."
+# Checkout the systemc directory
+if ! git checkout ssd-data-model/main -- deployment_extracts/systemc/live/; then
+  echo "Error: Failed to checkout the systemc folder. Invalid reference or permissions issue."
+  exit 1
+fi
+
+# Checkout the mosaic directory
+if ! git checkout ssd-data-model/main -- deployment_extracts/mosaic/live/; then
+  echo "Error: Failed to checkout the mosaic folder. Invalid reference or permissions issue."
+  exit 1
+fi
+
+# Checkout the eclipse directory
+if ! git checkout ssd-data-model/main -- deployment_extracts/eclipse/live/; then
+  echo "Error: Failed to checkout the eclipse folder. Invalid reference or permissions issue."
+  exit 1
+fi
+
+# Checkout the caredirector directory
+if ! git checkout ssd-data-model/main -- deployment_extracts/caredirector/live/; then
+  echo "Error: Failed to checkout the caredirector folder. Invalid reference or permissions issue."
+  exit 1
+fi
+
+# Checkout the azeus directory
+if ! git checkout ssd-data-model/main -- deployment_extracts/azeus/live/; then
+  echo "Error: Failed to checkout the azeus folder. Invalid reference or permissions issue."
   exit 1
 fi
 
@@ -49,19 +74,25 @@ mkdir -p eclipse/
 mkdir -p caredirector/
 mkdir -p azeus/
 
-# Move the contents to the appropriate directories
+# Move the systemc folder's contents to the systemc directory
 mv deployment_extracts/systemc/live/* systemc/
+
+# Move the mosaic folder's contents to the mosaic directory
 mv deployment_extracts/mosaic/live/* mosaic/
+
+# Move the eclipse folder's contents to the eclipse directory
 mv deployment_extracts/eclipse/live/* eclipse/
+
+# Move the caredirector folder's contents to the caredirector directory
 mv deployment_extracts/caredirector/live/* caredirector/
+
+# Move the azeus folder's contents to the azeus directory
 mv deployment_extracts/azeus/live/* azeus/
 
 # Remove the empty directory structures after the move
 rm -rf deployment_extracts/
 
-# Ensure all paths are added by modifying sparse-checkout or using the --sparse option
-git add --sparse .
-
 # Stage, commit, and push the changes to the downstream repository
-git commit -m "Add live SQL files from systemc, mosaic, eclipse, caredirector, and azeus from ssd-data-model repository"
+git add .
+git commit -m "Add live SQL files from multiple folders in the ssd-data-model repository"
 git push origin main
