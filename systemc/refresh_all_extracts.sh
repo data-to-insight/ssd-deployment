@@ -1,13 +1,13 @@
 #!/bin/bash
-# chmod +x test.sh
-
+# chmod +x systemc/refresh_all_extracts.sh
 # This bash file to be run from the downstream repo!
 
-# /workspaces/ssd-data-model/deployment_extracts/systemc/live/
-# /workspaces/ssd-data-model/deployment_extracts/mosaic/live/
-# /workspaces/ssd-data-model/deployment_extracts/eclipse/live/
-# /workspaces/ssd-data-model/deployment_extracts/caredirector/live/
-# /workspaces/ssd-data-model/deployment_extracts/azeus/live/
+# Script pulls from master ssd-data-model/ repo
+# ssd-data-model/deployment_extracts/systemc/live/
+# ssd-data-model/deployment_extracts/mosaic/live/
+# ssd-data-model/deployment_extracts/eclipse/live/
+# ssd-data-model/deployment_extracts/caredirector/live/
+# ssd-data-model/deployment_extracts/azeus/live/
 
 # Check if already in the ssd-deployment directory
 if [ ! -d ".git" ]; then
