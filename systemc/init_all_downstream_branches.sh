@@ -23,7 +23,7 @@ echo "mosaic/" >> .git/info/sparse-checkout
 # Reapply sparse checkout to update the working directory
 git sparse-checkout reapply
 
-# Iterate over each LA and system type
+# Fetch and move the necessary files for each LA
 for la in "${!la_system_map[@]}"; do
   system=${la_system_map[$la]}
 
@@ -32,14 +32,25 @@ for la in "${!la_system_map[@]}"; do
   
   if ! git rev-parse --verify $branch_name > /dev/null 2>&1; then
     git checkout -b $branch_name
-    
-    # Ensure the directory is created and add at least a placeholder file
-    mkdir -p $system/$la/
-    echo "Placeholder for $system-$la" > $system/$la/README.md
 
-    # Add the new files and directories to the branch
+    # Fetch the specific folder from the upstream repository
+    if ! git checkout ssd-data-model/main -- deployment_extracts/$system/live/; then
+      echo "Error: Failed to checkout the $system folder for $la."
+      exit 1
+    fi
+    
+    # Ensure the directory for the LA is created
+    mkdir -p $system/$la/
+
+    # Move the fetched files into the LA's subdirectory
+    mv deployment_extracts/$system/live/* $system/$la/
+
+    # Remove the empty fetched directory
+    rm -rf deployment_extracts/$system/
+
+    # Add and commit the new files
     git add $system/$la/
-    git commit -m "Initial setup for $system-$la"
+    git commit -m "Setup for $system-$la"
     git push origin $branch_name
   fi
 done
@@ -47,7 +58,7 @@ done
 # Return to the main branch
 git checkout main
 
-# Ensure everything is staged and committed (including the script itself)
+# Ensure the script itself is committed to the main branch
 git add systemc/init_all_downstream_branches.sh
 git commit -m "Ensure all changes are committed, including init script."
 git push origin main
